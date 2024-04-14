@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Titillium+Web&display=swap");
+
+:root {
+    --main-padding: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0); /* Название блюда */
+}
+
+body {
+    font-size: 14px;
+    padding: var(--main-padding);
+    font-family: "inter", sans-serif;
+    background-color: lightgrey; /* Весь фон кроме рамок */
+    /* color: var(--tg-theme-text-color); */ /* Не влияет на оформление */
+}
+
+a {
+    color: rgb(0, 0, 0); /* Для кнопки "посмотреть меню" */
+}
+
+button { /* Тег не используется */
+    background-color: red;
+    color: red;
+}
+
+.mb {
+    margin-bottom: var(--main-padding);
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    position: fixed, 10pt 140pt; /* Разобраться с фиксацией заголовка при скролле ленты */
+    
+
+}
+
+.hint {
+    color: rgb(0, 0, 0); /* Описание блюда */
+    font-size: 0.8rem;
+}
+
+hr { /* Тег без определения */
+    background: var(--tg-theme-hint-color);
+    margin-bottom: var(--main-padding);
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* оформление второй страницы приложения */
+}
+
+.form-control { /* Оформление поля ввода */
+    width: 100%;
+    height: 60px;
+    background: var(--tg-theme-secondary-bg-color);
+    color: var(--tg-theme-text-color);
+    resize: none;
+    font-family: inherit;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.products { /* Часть оформления главной страницы приложения */
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+}
+
+.product-item { /* Рамка вокруг элемнтов на первой странице */
+width: 260px;
+height: 260px;
+overflow: hidden; /* Пролистывание элементов */
+box-shadow: 2px 3px 6px rgb(0, 0, 0);
+background-color: lightgrey;
+border-radius: 10px;
+margin-bottom: var(--main-padding);
+cursor: pointer;
+margin-right: 25px; /* Внешний отступ рамок */
+}
+
+.product-image { /* Рамка вокруг изображения на первой странице */
+    width: 240px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(240, 233, 233, 0.829);
+    text-align: center;
+}
+
+.product-image img { /* Изображение на первой странице */
+    width: 240px;
+    height: 180px;
+    display: block;
+    padding-left: 15px;
+    background-color: lightgrey;
+}
+
+.product-info {
+    padding: var(--main-padding);
+}
+
+.mb3 { /* Изображение на второй странице */
+    width: 240px;
+    height: 180px;
+}
+div#app {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+div#app > div#app1 {
+   /*  color: lightblue;
+    background-color: grey; */
+    padding: 25px;
+    margin: 0px;
+    text-align: center;
+    overflow-x: scroll;
+    transform:  rotate(0deg)  translateX(0%);
+    transform-origin: top left;
+    width: 350px;
+    height: 445px;
+}
+div#app > div#app2 {
+    /*  color: lightblue;
+     background-color: grey; */
+     padding: 25px;
+     margin: 0px;
+     text-align: center;
+     overflow-x: scroll;
+     transform:  rotate(0deg)  translateX(0%);
+     transform-origin: top left;
+     width: 350px;
+     height: 445px;
+ }
+ div#app > div#app3 {
+    /*  color: lightblue;
+     background-color: grey; */
+     padding: 25px;
+     margin: 0px;
+     /* position: fixed; */ 
+     text-align: center;
+     overflow-x: scroll;
+     transform:  rotate(0deg)  translateX(0%);
+     transform-origin: top left;
+     width: 350px;
+     height: 445px;
+ }
+div#app > div:hover {transform: scale(1.1, 1.1) translateY(2px); transition-duration: 0.5s;} /* Анимации для главной страницы - shop.component.ts */
+
+table.catalog td {
+    border-top: black thin dotted;
+    border-bottom: black thin dotted;
+    padding: 10px;
+}
+.id {
+     display: flex;
+     justify-content: center;
+     background-color: red;
+     color: red;
+}
+
+
+
+
+
+
