@@ -8,19 +8,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: rgb(0, 0, 0); /* Название блюда */
+    color: rgb(80, 32, 18); /* Название блюда */
 }
 
 body {
     font-size: 14px;
     padding: var(--main-padding);
     font-family: "inter", sans-serif;
-    background-color: lightgrey; /* Весь фон кроме рамок */
+    background-color: rgb(244, 235, 220); /* Весь фон кроме рамок */
     /* color: var(--tg-theme-text-color); */ /* Не влияет на оформление */
 }
 
 a {
-    color: rgb(0, 0, 0); /* Для кнопки "посмотреть меню" */
+    color: rgb(80, 32, 18); /* Для кнопки "посмотреть меню" */
 }
 
 button { /* Тег не используется */
@@ -30,7 +30,7 @@ button { /* Тег не используется */
 
 .mb {
     margin-bottom: var(--main-padding);
-    color: rgb(0, 0, 0);
+    color: rgb(80, 32, 18);
     text-align: justify;
     position: fixed, 10pt 140pt; /* Разобраться с фиксацией заголовка при скролле ленты */
     
@@ -38,7 +38,7 @@ button { /* Тег не используется */
 }
 
 .hint {
-    color: rgb(0, 0, 0); /* Описание блюда */
+    color: rgb(80, 32, 18); /* Описание блюда */
     font-size: 0.8rem;
 }
 
@@ -68,7 +68,7 @@ hr { /* Тег без определения */
     list-style: none;
     margin: 0px;
     padding: 0px;
-    background-color: lightgrey;
+    background-color: rgb(244, 235, 220);
     display: flex;
     justify-content: center;
 }
@@ -77,8 +77,8 @@ hr { /* Тег без определения */
 width: 260px;
 height: 260px;
 overflow: hidden; /* Пролистывание элементов */
-box-shadow: 2px 3px 6px rgb(0, 0, 0);
-background-color: lightgrey;
+box-shadow: 2px 3px 6px rgb(80, 32, 18);
+background-color: rgb(244, 235, 220);
 border-radius: 10px;
 margin-bottom: var(--main-padding);
 cursor: pointer;
@@ -90,7 +90,7 @@ margin-right: 25px; /* Внешний отступ рамок */
     height: 180px;
     display: flex;
     justify-content: center;
-    background-color: rgba(240, 233, 233, 0.829);
+    background-color: rgb(244, 235, 220);
     text-align: center;
 }
 
@@ -99,7 +99,7 @@ margin-right: 25px; /* Внешний отступ рамок */
     height: 180px;
     display: block;
     padding-left: 15px;
-    background-color: lightgrey;
+    background-color: rgb(244, 235, 220);
 }
 
 .product-info {

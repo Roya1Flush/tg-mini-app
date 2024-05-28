@@ -1,3 +1,4 @@
+/* Вторая страница приложения */
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { IProduct, ProductsService } from '../../services/products.service';
 import { TelegramService } from '../../services/telegram.service';
@@ -7,6 +8,11 @@ import { ActivatedRoute, Router } from '@angular/router';
   selector: 'app-product',
   standalone: true,
   template: `
+  <header>
+	<div class="pos1"><img src="images/sushi.jpg"></div>
+	<div class="pos2"><h1>Вставить</h1></div>
+	<div class="pos3"><h1>заголовок</h1></div>
+</header>
   <div class="centered">
   <h2 class="mb">{{ product.title }}</h2>
   <br />
