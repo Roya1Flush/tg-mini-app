@@ -10,8 +10,8 @@ import { ActivatedRoute, Router } from '@angular/router';
   template: `
   <header>
 	<div class="pos1"><img src="images/sushi.jpg"></div>
-	<div class="pos2"><h1>Вставить</h1></div>
-	<div class="pos3"><h1>заголовок</h1></div>
+	<div class="pos2"><h1>И сюда можно</h1></div>
+	<div class="pos3"><h1>вставлять текст</h1></div>
 </header>
   <div class="centered">
   <h2 class="mb">{{ product.title }}</h2>
@@ -38,7 +38,7 @@ export class ProductComponent implements OnInit, OnDestroy {
   }
 
   goBack() {
-    this.router.navigate(["/"]);
+    this.router.navigate([`/`]);
   }
 
   ngOnInit(): void {

@@ -11,15 +11,15 @@ import { ProductListComponent } from '../../components/product-list/product-list
   template: `
   <header>
 	<div class="pos1"><img src="ссылка"></div>
-	<div class="pos2"><h1>Вставка</h1></div>
-	<div class="pos3"><h1>Заголовка</h1></div>
+	<div class="pos2"><h1>Сюда можно</h1></div>
+	<div class="pos3"><h1>вставлять текст и ссылки</h1></div>
 </header>
   <table class ="catalog">
   <div id="app">
   <div id="app1">
     <tr>
       <td>
-  <app-product-list title="Повара+" subtitle="Доставят: Завтра" [products]="products.byGroup['skill']"  />
+  <app-product-list title="Повара" subtitle="Доставят: Завтра" [products]="products.byGroup['skill']"  />
 </td>
 </tr>  
 </div>

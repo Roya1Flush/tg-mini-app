@@ -19,6 +19,8 @@ import { RouterLink } from '@angular/router';
         <h3>{{ product.title }}</h3>
         <p class="hint">{{ product.text }}</p>
         <p class="hint">{{ product.time }}</p>
+        <p class="hint">{{ product.distance }}</p>
+        <p class="hint">{{ product.text2 }}</p>
 
       </div>
       </li>
