@@ -4,36 +4,47 @@ import { TelegramService } from '../../services/telegram.service';
 import { ProductsService } from '../../services/products.service';
 import { ProductListComponent } from '../../components/product-list/product-list.component';
 
+
 @Component({
   selector: 'app-shop',
   standalone: true,
   imports: [ProductListComponent],
   template: `
-  <header>
-	<div class="pos1"><img src="ссылка"></div>
-	<div class="pos2"><h1>Сюда можно</h1></div>
-	<div class="pos3"><h1>вставлять текст и ссылки</h1></div>
-</header>
+  <!-- <header>
+	<div class="pos1"><img src="https://sun127-1.userapi.com/impg/Zp0mTVjnUEoBGVD2MurG7ysARB1WPlUcgHIS_g/almzILAYJcY.jpg?size=864x1080&quality=96&sign=a09a6471960a0c300863289de91e5b37&type=album"></div>
+	<div class="pos2"><h1>YammY</h1></div>
+	<div class="pos2"><h1>Food</h1></div>
+</header> -->
   <table class ="catalog">
   <div id="app">
+    <h3> Повара </h3> 
+      <br>
+    <h5>  Доставят: Завтра </h5>
   <div id="app1">
     <tr>
       <td>
-  <app-product-list title="Повара" subtitle="Доставят: Завтра" [products]="products.byGroup['skill']"  />
+  <app-product-list [products]="products.byGroup['skill']"  /> 
+  <!-- <app-product-list title="Повара" subtitle="Доставят: Завтра" [products]="products.byGroup['skill']"  /> -->
 </td>
 </tr>  
 </div>
+   <h3>Комбо Сортировка:</h3>
+      <br>
+   <h5> Ближайшая доставка</h5>
   <div id="app2">
     <tr>
       <td>
-  <app-product-list title="Комбо" subtitle="Сортировка: Ближайшая доставка" [products]="products.byGroup['intensive']" />
+  <app-product-list [products]="products.byGroup['intensive']" />
 </td>
 </tr>  
 </div>
+<h3>Блюда</h3>
+  <br>
+<h5>Поиск блюд</h5>
   <div id="app3">
     <tr>
       <td>
-  <app-product-list title="Блюда" subtitle="Поиск блюд" [products]="products.byGroup['course']" />
+  <app-product-list [products]="products.byGroup['course']" />
 </td>
 </tr>  
 </div>

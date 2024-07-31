@@ -27,7 +27,7 @@ export class FeedbackComponent implements OnInit, OnDestroy {
     this.sendData = this.sendData.bind(this);
   }
   
-  ngOnInit(): void {
+  ngOnInit(): void { 
     this.telegram.MainButton.setText('Отправить сообщение'); 
     /* this.telegram.MainButton.show();
     this.telegram.MainButton.disable(); */

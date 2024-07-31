@@ -1,5 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Inject, Injectable, } from '@angular/core';
+import { expand } from 'rxjs';
 import { useWebAppClosingConfirmation } from 'vue-tg';
 /* import { telegram-web-app } from 'telegram-web-app.js';
 import { getVersion } from 'telegram-web-app.js' получение версии
@@ -26,13 +27,6 @@ if (isClosingConfirmationEnabled) {
 } else {
   // Подтверждение закрытия выключено
 };
-/* const { isClosingConfirmationEnabled } = useWebAppClosingConfirmation()
-if (isClosingConfirmationEnabled.value) {
-  console.log('Confirmation enabled');
-  // Подтверждение закрытия включено
-} else { console.log('Confirmation disabled');
-  // Подтверждение закрытия выключено
-} */
 
 @Injectable({
   providedIn: 'root'
@@ -44,7 +38,7 @@ export class TelegramService {
     this.tg = this.window.Telegram.WebApp;
     if (this.tg.isExpanded) {
       // Приложение растянуто на весь экран
-    } else {
+    } else { expand
       // Приложение не растянуто
     }
     this.tg.expand(); /* Открытие на весь экран */
@@ -54,13 +48,7 @@ export class TelegramService {
       // Приложение не растянуто
     }
 
-     /* const {isClosingConfirmationEnabled} = useWebApp();
-    if ( isClosingConfirmationEnabled ) {
-    console.log('Confirmation enabled');
-  } 
-    else {
-    console.log('Confirmation disabled');
-  };   */
+     
   const { enableClosingConfirmation } = useWebAppClosingConfirmation()
   enableClosingConfirmation() //Подтверждение закрытия
   }

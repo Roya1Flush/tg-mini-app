@@ -3,12 +3,13 @@
 import { Injectable } from '@angular/core';
 import { url } from 'telegraf/typings/button';
 
-const domain =  ('https://vk.com')
+
+const domain =  ('https://vk.com/royalflush322')
 
 export enum ProductType {
-  Skill = 'skill',
-  Intensive = 'intensive',
-  Course = 'course',
+  Skill = 'skill', /* Привязка поваров */
+  Intensive = 'intensive', /* Привязка комбо */
+  Course = 'course', /* Привязка блюд */
 }
 
 export interface IProduct {
@@ -105,7 +106,7 @@ function addDomainToLinkAndImage(product: IProduct) {
     link: '/menyu',
     image: 'https://sun127-1.userapi.com/impg/Zp0mTVjnUEoBGVD2MurG7ysARB1WPlUcgHIS_g/almzILAYJcY.jpg?size=864x1080&quality=96&sign=a09a6471960a0c300863289de91e5b37&type=album',
     text: 'Макароны по-флотски Салат "Греческий"',
-    text2: 'Макароны по-флотски Салат "Греческий"',
+    text2: '',
     time: 'Доставка завтра до 12:00',
     distance: '',
     type: ProductType.Intensive,
