@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Titillium+Web&display=swap");
+
+ :root {
+    --main-padding: 16px;
+} 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(56, 22, 11); /* Вся текстовая информация вне тегов */
+}
+
+header {
+    background-image: url("https://fok-zdorovie.ru/wp-content/uploads/2022/09/shashluk.jpg");
+}
+
+body {
+    font-size: 14px;
+    padding: var(--main-padding);
+    font-family: "inter", sans-serif;
+    background-color: rgb(244, 235, 220); /* Весь фон кроме рамок */
+    /* color: var(--tg-theme-text-color); */ /* Не влияет на оформление */
+}
+
+.descrip { /* Текстовая информация в блоке */
+    color: rgb(56, 22, 11); 
+    font-size: 14px;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.centered { /* оформление второй страницы приложения */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.block { /* Часть оформления главной страницы приложения */
+    /* list-style: none; */
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(244, 231, 220);
+    display: flex;
+    justify-content: center;
+}
+
+.product-item { /* Рамка вокруг элемнтов на первой странице */
+width: 260px;
+height: 140px;
+overflow: hidden; /* Пролистывание элементов */
+box-shadow: 2px 3px 6px rgb(56, 22, 11);
+background-color: rgb(244, 235, 220);
+border-radius: 10px;
+margin-bottom: var(--main-padding);
+cursor: pointer;
+margin-right: 25px; /* Внешний отступ рамок */
+}
+
+ /*.product-image { /* Рамка вокруг изображения на первой странице, пока оставить как коммент 31.05 */
+    /* width: 240px;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(244, 235, 220);
+    text-align: center; */
+/* }  */
+
+.product-image img { /* Изображение на первой странице */
+    width: 60px;
+    height: 40px;
+    float: right;
+    display: block;
+    padding-left: 0px;
+    background-color: rgb(244, 235, 220);
+}
+
+.product-info { /* Для описания в блоках 1стр */
+    padding: var(--main-padding);
+}
+
+.image2str { /* Изображение на второй странице */
+    width: 240px;
+    height: 180px;
+}
+div#kombo2str { /* Комбо на второй странице */
+    padding: 25px;
+    margin: 0px;
+    text-align: center;
+    overflow-x: scroll;
+    transform:  rotate(0deg)  translateX(0%);
+    transform-origin: top left;
+    width: 350px;
+    height: 330px;
+    display: flex;
+}
+div#blud2str { /* блюда на второй странице */
+    padding-left: 20px;
+    text-align: left;
+    width: 350px;
+    height: 110%;
+    display: flex;
+    /* border-radius: 10px;
+    border-style: groove;
+    border-color: black;
+    border-width: 1px; */
+    flex-wrap: wrap;  
+}
+
+/* div#app {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    transform:  rotate(0deg)  translateX(0%);
+    transform-origin: top right;
+    width: 350px;
+    height: 100%;
+     justify-content: space-between; 
+} вертикальный скролл первой страницы*/ 
+
+
+div#app > div#app1 {   /* Все теги "app" - скролл и выравние блоков на 1стр */
+   /*  color: lightblue;
+    background-color: grey; */
+    padding: 25px;
+    text-align: center;
+    overflow-x: scroll;
+    transform:  rotate(0deg)  translateX(0%);
+    transform-origin: top left;
+    width: 350px;
+    height: 100%;
+}
+div#app > div#app2 {
+    /*  color: lightblue;
+     background-color: grey; */
+     padding: 25px;
+     margin: 0px;
+     text-align: center;
+     overflow-x: scroll;
+     transform:  rotate(0deg)  translateX(0%);
+     transform-origin: top left;
+     width: 350px;
+     height: 100%;
+ }
+ div#app > div#app3 {
+    /*  color: lightblue;
+     background-color: grey; */
+     padding: 25px;
+     margin: 0px;
+     text-align: center;
+     overflow-x: scroll;
+     transform:  rotate(0deg)  translateX(0%);
+     transform-origin: top left;
+     width: 350px;
+     height: 100%;
+ }
+
+ /* .product-item:hover {transform: scale(1.1, 1.1) translateY(2px); transition-duration: 0.5s;} */ /* Анимации для главной страницы - shop.component.ts */
+
+/* table.catalog td {
+    border-top: black thin dotted;
+    border-bottom: black thin dotted;
+} */
+/* .id {
+     display: flex;
+     justify-content: center;
+     background-color: red;
+     color: red;
+} */
+.scale { /* Шкала повара 115% */
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    width: 240px;
+    background-color: #d4a628;
+    color: grey;
+    height: 20px;
+    border-style: groove;
+    border-color: black;
+    border-width: 1px;
+  }
+
+      /* Все теги "pos" - оформление второй страницы product.component.ts*/
+.pos1 img {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin-left: 10px;
+}
+.pos2 {
+    text-align: center;
+    color: rgb(56, 22, 11);
+}
+.pos3 img {
+    width: 180px;
+    height: 180px;
+    display: block;
+    margin-right: 50px;
+}
+.pos3 {
+    text-align: left;
+}
+.pos4 img {
+    width: 90px;
+    height: 80px;
+    display: flex;
+    margin-right: 20px;
+}
+.pos4 {
+    margin-top: 20px;
+}
+
+.menubutton {
+    color: rgb(56, 22, 11); /* Для кнопки "посмотреть меню" */
+}
+
+.keyboard button { /* Тег не используется */
+    background-color: red;
+    color: red;
+}
+
+
+.mb { /*Загололовок второй страницы */
+    margin-bottom: var(--main-padding);
+    color: rgb(56, 22, 11);
+    text-align: justify;
+}
+
+.form-control { /* Оформление поля ввода feedback*/
+    width: 100%;
+    height: 60px;
+    background: var(--tg-theme-secondary-bg-color);
+    color: var(--tg-theme-text-color);
+    resize: none;
+    font-family: inherit;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+  
+
+
+
+
+
+
