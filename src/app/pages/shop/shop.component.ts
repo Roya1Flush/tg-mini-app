@@ -17,9 +17,9 @@ import { ProductListComponent } from '../../components/product-list/product-list
 </header> -->
   <table class ="catalog">
   <div id="app">
-    <h3> Повара </h3> 
+    <h2> Повара </h2> 
       <br>
-    <h5>  Доставят: Завтра </h5>
+    <h4>  Доставят:<ins><strong> Завтра</strong></ins> </h4>
   <div id="app1">
     <tr>
       <td>
@@ -28,9 +28,9 @@ import { ProductListComponent } from '../../components/product-list/product-list
 </td>
 </tr>  
 </div>
-   <h3>Комбо Сортировка:</h3>
+   <h2>Комбо Сортировка:</h2>
       <br>
-   <h5> Ближайшая доставка</h5>
+   <h4> Ближайшая доставка</h4>
   <div id="app2">
     <tr>
       <td>
@@ -38,9 +38,9 @@ import { ProductListComponent } from '../../components/product-list/product-list
 </td>
 </tr>  
 </div>
-<h3>Блюда</h3>
+<h2>Блюда</h2>
   <br>
-<h5>Поиск блюд</h5>
+<h4>Поиск блюд</h4>
   <div id="app3">
     <tr>
       <td>

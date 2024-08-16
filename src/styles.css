@@ -122,7 +122,8 @@ div#blud2str { /* блюда на второй странице */
 div#app > div#app1 {   /* Все теги "app" - скролл и выравние блоков на 1стр */
    /*  color: lightblue;
     background-color: grey; */
-    padding: 25px;
+    padding: 0px;
+    margin: 25px;
     text-align: center;
     overflow-x: scroll;
     transform:  rotate(0deg)  translateX(0%);
@@ -133,8 +134,8 @@ div#app > div#app1 {   /* Все теги "app" - скролл и выравни
 div#app > div#app2 {
     /*  color: lightblue;
      background-color: grey; */
-     padding: 25px;
-     margin: 0px;
+     padding: 0px;
+     margin: 25px;
      text-align: center;
      overflow-x: scroll;
      transform:  rotate(0deg)  translateX(0%);
@@ -145,8 +146,8 @@ div#app > div#app2 {
  div#app > div#app3 {
     /*  color: lightblue;
      background-color: grey; */
-     padding: 25px;
-     margin: 0px;
+     padding: 0px;
+     margin: 25px;
      text-align: center;
      overflow-x: scroll;
      transform:  rotate(0deg)  translateX(0%);
