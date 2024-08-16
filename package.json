@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "telegraf": "^4.16.3",
+    "telegram-web-app": "^0.0.0",
     "vue-tg": "^0.6.1"
   }
-  
 }

@@ -13,16 +13,17 @@ import { ProductListComponent } from '../../components/product-list/product-list
   imports: [ProductListComponent], //последнее
   template: `
   <header>
-	<div class="pos1"><img src="https://sun127-1.userapi.com/impg/Zp0mTVjnUEoBGVD2MurG7ysARB1WPlUcgHIS_g/almzILAYJcY.jpg?size=864x1080&quality=96&sign=a09a6471960a0c300863289de91e5b37&type=album"></div>
+	<!-- <div class="pos1"><img src="https://sun127-1.userapi.com/impg/Zp0mTVjnUEoBGVD2MurG7ysARB1WPlUcgHIS_g/almzILAYJcY.jpg?size=864x1080&quality=96&sign=a09a6471960a0c300863289de91e5b37&type=album"></div>
 	<div class="pos2"><h1>YammY</h1></div>
-	<div class="pos2"><h1>Food</h1></div>
+	<div class="pos2"><h1>Food</h1></div> -->
 </header>
   <div class="centered">
   <h2 class="mb">{{ product.title }}</h2>
   <br />
   <img class="image2str" [src]="product.image"  [alt]="product.title" />
   <div class="scale">115%</div>
-  <p>{{ product.text}}</p>
+  <br><strong><ins>Время работы</ins></strong>
+  <!-- <p>{{ product.text}}</p> -->
   <p>{{ product.time}}</p>
   <div class="menubutton"><a [href]="product.link" target="_blank">Посмотреть меню</a></div>
 </div>
@@ -76,7 +77,10 @@ export class ProductComponent implements OnInit, OnDestroy {
   
 
   goBack() {
-    this.router.navigate(['']);
+    this.router.navigate([''])
+    .then(() =>{
+      location.reload();
+    });
   }
 
   ngOnInit(): void {
