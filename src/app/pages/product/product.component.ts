@@ -28,7 +28,7 @@ import { ProductListComponent } from '../../components/product-list/product-list
   <div class="menubutton"><a [href]="product.link" target="_blank">Посмотреть меню</a></div>
 </div>
 <table class ="catalog">
-  <h2>Комбо:</h2>
+  <h2>Блюда:</h2>
     <tr>
       <td>
         <div id="kombo2str">

@@ -19,7 +19,7 @@ import { ProductListComponent } from '../../components/product-list/product-list
   <div id="app">
     <h2> Повара </h2> 
       <br>
-    <h4>  Доставят:<ins><strong> Завтра</strong></ins> </h4>
+    <h4>  Доставят:&emsp;<ins><strong>Завтра</strong></ins> </h4>
   <div id="app1">
     <tr>
       <td>
@@ -28,9 +28,9 @@ import { ProductListComponent } from '../../components/product-list/product-list
 </td>
 </tr>  
 </div>
-   <h2>Комбо Сортировка:</h2>
+   <h2>Комбо</h2>
       <br>
-   <h4> Ближайшая доставка</h4>
+   <h4>Сортировка:&emsp;<ins><strong>Ближайшая доставка</strong></ins></h4>
   <div id="app2">
     <tr>
       <td>
