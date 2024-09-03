@@ -3,14 +3,16 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { IProduct, ProductsService } from '../../services/products.service';
 import { TelegramService } from '../../services/telegram.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProductListComponent } from '../../components/product-list/product-list.component'; //последнее
+import { ProductListComponent } from '../../components/product-list/product-list.component';
+import {HttpClient, HttpClientModule} from '@angular/common/http';  // Добавляем HttpClientModule
+
 
 
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [ProductListComponent], //последнее
+  imports: [ProductListComponent, HttpClientModule], //последнее
   template: `
   <header>
 	<!-- <div class="pos1"><img src="https://sun127-1.userapi.com/impg/Zp0mTVjnUEoBGVD2MurG7ysARB1WPlUcgHIS_g/almzILAYJcY.jpg?size=864x1080&quality=96&sign=a09a6471960a0c300863289de91e5b37&type=album"></div>
@@ -18,7 +20,7 @@ import { ProductListComponent } from '../../components/product-list/product-list
 	<div class="pos2"><h1>Food</h1></div> -->
 </header>
   <div class="centered">
-  <h2 class="mb">{{ product.title }}</h2>
+  <h2 class="mb">{{ product.title }}  {{comboData[0].name}} </h2>
   <br />
   <img class="image2str" [src]="product.image"  [alt]="product.title" />
   <div class="scale">115%</div>
@@ -37,7 +39,7 @@ import { ProductListComponent } from '../../components/product-list/product-list
       <div class="pos3"><h3>Трудовые будни</h3><img src="https://sun127-1.userapi.com/impg/Zp0mTVjnUEoBGVD2MurG7ysARB1WPlUcgHIS_g/almzILAYJcY.jpg?size=864x1080&quality=96&sign=a09a6471960a0c300863289de91e5b37&type=album"></div>
         </div>
       </td>
-    </tr>  
+    </tr>
 </table>
 <table class ="catalog">
   <h2>Блюда:</h2>
@@ -55,26 +57,27 @@ import { ProductListComponent } from '../../components/product-list/product-list
       <div class="pos4"><h3>Карбонара</h3><img src="https://sun127-1.userapi.com/impg/Zp0mTVjnUEoBGVD2MurG7ysARB1WPlUcgHIS_g/almzILAYJcY.jpg?size=864x1080&quality=96&sign=a09a6471960a0c300863289de91e5b37&type=album"></div>
         </div>
       </td>
-    </tr>  
+    </tr>
 </table>
   `,
 })
 export class ProductComponent implements OnInit, OnDestroy {
   product: IProduct;
-  
-  
+  comboData: any;
+
 
   constructor(
     private products: ProductsService,
     private telegram: TelegramService,
-    private route: ActivatedRoute, 
-    private router: Router
+    private route: ActivatedRoute,
+    private router: Router,
+    private http: HttpClient
     ) {
     const id = this.route.snapshot.paramMap.get('id');
     this.product = this.products.getById(id);
     this.goBack = this.goBack.bind(this);
   }
-  
+
 
   goBack() {
     this.router.navigate([''])
@@ -86,7 +89,12 @@ export class ProductComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.telegram.BackButton.show();
     this.telegram.BackButton.onClick(this.goBack);
+    this.http.get<any>('http://localhost:8080/api/v1/cook')
+      .subscribe(data => {this.comboData = data
+          console.log(this.comboData)},
+        error => console.error('Error fetching combo data:', error));
   }
+
 
   ngOnDestroy(): void {
     this.telegram.BackButton.offClick(this.goBack);
